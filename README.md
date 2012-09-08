@@ -4,6 +4,8 @@ GMO Payment Gateway for XOOPS Cube
 gmopgx は、 GMOペイメントゲートウェイ株式会社 ( http://www.gmo-pg.com/ )のクレジットカード決済サービスを利用する為の決済モジュールと、決済モジュールを利用するショッピングカートのアプリケーションがセットになったリポジトリで 、XOOPS Cube 2.1以降で動作します。
 
 ライセンス： GPL V2.0 オープンソースライセンス
+デモサイト： http://www.xoopsec.com
+
 
 インストール方法
 
