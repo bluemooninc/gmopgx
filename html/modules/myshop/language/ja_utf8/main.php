@@ -38,7 +38,7 @@ define("_MYSHOP_EMAIL","Email");
 define("_MYSHOP_TYPE","タイプ");
 define("_MYSHOP_MANUFACTURER","出店者");
 define("_MYSHOP_MANUFACTURER_INF","出店者の情報");
-define("_MYSHOP_NUMBER","在庫管理単位(SKU)");
+define("_MYSHOP_NUMBER","在庫数(SKU)");
 define("_MYSHOP_EXTRA_ID","エクストラ ID");
 define("_MYSHOP_WIDTH","幅");
 define("_MYSHOP_LENGTH","長さ");
