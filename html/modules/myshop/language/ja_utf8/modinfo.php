@@ -35,7 +35,7 @@ define("_MI_MYSHOP_SMNAME3_1","&nbsp;販売条件について");
 define("_MI_MYSHOP_ADMENU0","店舗登録");
 define("_MI_MYSHOP_ADMENU1","税率設定");
 define("_MI_MYSHOP_ADMENU2","カテゴリー");
-define("_MI_MYSHOP_ADMENU3","メーカー");
+define("_MI_MYSHOP_ADMENU3","出店者設定");
 define("_MI_MYSHOP_ADMENU4","商品設定");
 define("_MI_MYSHOP_ADMENU5","注文状況");
 define("_MI_MYSHOP_ADMENU6","値引き");
@@ -87,7 +87,7 @@ define("_MI_MYSHOP_INFOTIPS","Length of tooltips");
 define("_MI_MYSHOP_INFOTIPS_DES","If you use this option, links related to products will contains the first (n) characters of the product. If you set this value to 0 then the infotips will be empty");
 define('_MI_MYSHOP_UPLOADFILESIZE', 'MAX Filesize Upload (KB) 1048576 = 1 Meg');
 
-define('_MI_PRODUCTSBYTHISMANUFACTURER', 'Products by the same manufacturer');
+define('_MI_PRODUCTSBYTHISMANUFACTURER', 'この出店者が出品している商品');
 
 define('_MI_MYSHOP_PREVNEX_LINK','Show Previous and Next link ?');
 define('_MI_MYSHOP_PREVNEX_LINK_DESC','When this option is set to \'Yes\', two new links are visibles at the bottom of each product. Those links are used to go to the previous and next product according to the publish date');

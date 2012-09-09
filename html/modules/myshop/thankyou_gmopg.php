@@ -20,7 +20,6 @@
  * ****************************************************************************
  */
 require 'header.php';
-require_once MYSHOP_PATH . 'class/myshop_gmopg.php';
 /**
  * GMO-PG Controller
  */
@@ -29,22 +28,21 @@ $datasGmopg = false;
 $orderId = isset($_GET['orderId']) ? intval($_GET['orderId']) : NULL;
 $success = false;
 if (!is_null($orderId)) {
-    $gmopg = new Model_gmopg("payment");
-    $gmopg->find($orderId);
-    $orderId = $gmopg->get("orderId");
-    $gmopg_validate = $gmopg->get('status');
-    if (!is_null($orderId)) {
-        $commande = $h_myshop_commands->getLastUserOrder($xoopsUser->uid());
-        if (is_object($commande)) {
-            if ( $gmopg_validate==1) {
-                // Order checked
-                $h_myshop_commands->validateOrder($commande); // Validation and stocks update
-                $h_myshop_caddy->emptyCart();
-                $GLOBALS['current_category'] = -1;
-                $success = true;
-            } else {
-                $h_myshop_commands->setFraudulentOrder($commande);
-            }
+    $creditService = $root->mServiceManager->getService('gmoPayment');
+    if ($creditService != null) {
+        $client = $root->mServiceManager->createClient($creditService);
+        $paid = $client->call('checkOrderStatus', array('orderID' => $orderId));
+    }
+    $commande = $h_myshop_commands->getLastUserOrder($xoopsUser->uid());
+    if (is_object($commande)) {
+        if ($paid == true) {
+            // Order checked
+            $h_myshop_commands->validateOrder($commande); // Validation and stocks update
+            $h_myshop_caddy->emptyCart();
+            $GLOBALS['current_category'] = -1;
+            $success = true;
+        } else {
+            $h_myshop_commands->setFraudulentOrder($commande);
         }
     }
 }

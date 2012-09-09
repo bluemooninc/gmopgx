@@ -14,7 +14,7 @@
 
 <{* PRODUCT INFORMATION *}>
 
-<table cellspacing="0">
+<table class="table" cellspacing="0">
     <tr>
         <td colspan="2" class="myshop_producttitle_view-product"><h2>
             <{$product.product_recommended_picture}><{$product.product_title}></h2></td>
@@ -24,7 +24,7 @@
             <{if $product.product_thumb_full_url != ''}>
             <a href="javascript:openWithSelfMain('<{$smarty.const.MYSHOP_URL}>media.php?product_id=<{$product.product_id}>&type=picture', '',<{$smarty.const.MYSHOP_POPUP_MEDIA_WIDTH}>, <{$smarty.const.MYSHOP_POPUP_MEDIA_HEIGHT}>);"
                title="<{$product.product_href_title}>">
-                <img src="<{$product.product_thumb_full_url}>" alt="<{$product.product_href_title}>"/>
+                <img class="img-polaroid" src="<{$product.product_thumb_full_url}>" alt="<{$product.product_href_title}>"/>
             </a>
             <{/if}>
         </td>
@@ -182,7 +182,7 @@
     <h2><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="<{$smarty.const._MYSHOP_CART}>" border="0"/><{$smarty.const._MYSHOP_RELATED_PRODUCTS}>
     </h2>
 
-    <table align='center' class="myshop_categorylist">
+    <table align='center' class="table">
         <tr>
             <{foreach item=oneitem from=$product_related_products}>
             <td valign="top" align="center">

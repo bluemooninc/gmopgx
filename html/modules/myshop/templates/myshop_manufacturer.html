@@ -44,23 +44,22 @@
 </div>
 
 <{if count($products) > 0}>
-<div id="myshop_related">
-    <h3><img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MI_PRODUCTSBYTHISMANUFACTURER}>
+    <h3>
+	    <img src="<{$smarty.const.MYSHOP_IMAGES_URL}>box.png" alt="" border="0"/><{$smarty.const._MI_PRODUCTSBYTHISMANUFACTURER}>
     </h3>
-    <table border='0' cellspacing='5' cellpadding='0' align='center' class="myshop_categorylist">
+    <table class="table">
         <tr>
             <{foreach item=oneitem from=$products}>
             <td valign="top" align="center">
                 <{if $oneitem.product_thumb_url}>
-                <div class="myshop_productthumb">
                     <a class="btn btn-primary btn-large" href="<{$oneitem.product_url_rewrited}>"
                                                     title="<{$oneitem.product_href_title}>">
                         <img src="<{$oneitem.product_thumb_full_url}>" alt="<{$oneitem.product_href_title}>" border="0"/></a>
-                </div>
                 <{/if}>
                 <br/><{$oneitem.product_recommended_picture}><b><{$oneitem.product_title}></b> <{if
                 $mod_pref.use_price}>
-                <div class="myshop_productprice"><{if $oneitem.product_stock > 0 }><{$smarty.const._MYSHOP_PRICE}> : <a
+                <div class="myshop_productprice">
+	                <{if $oneitem.product_stock > 0 }><{$smarty.const._MYSHOP_PRICE}> : <a
                         href="<{$smarty.const.MYSHOP_URL}>caddy.php?op=addproduct&product_id=<{$oneitem.product_id}>"
                         title="<{$smarty.const._MYSHOP_ADD_TO_CART}>"><{if $oneitem.product_discount_price_ttc !=
                     ''}><{$oneitem.product_discount_price_ttc}><{else}><{$oneitem.product_price_ttc}><{/if}> <img
@@ -77,9 +76,7 @@
     </table>
     <{if $pagenav != ''}>
     <br/>
-
     <div align="left"><{$pagenav}></div>
     <br/>
     <{/if}>
-</div>
 <{/if}>

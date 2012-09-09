@@ -15,8 +15,8 @@ define("_MYSHOP_DONOTVOTE","Do not vote for your own resource.");
 define("_MYSHOP_RATEIT","Rate It!");
 define("_MYSHOP_RECEIVED","We received your submission. Thanks!");
 define("_MYSHOP_CATEGORY","カテゴリ");
-define("_MYSHOP_VOTE","Vote");
-define("_MYSHOP_SEARCHRESULTS","Search results"); // %s is search keywords
+define("_MYSHOP_VOTE","投票");
+define("_MYSHOP_SEARCHRESULTS","検索結果"); // %s is search keywords
 define("_MYSHOP_TITLE","製品タイトル");
 define("_MYSHOP_DATE","公開日");
 define("_MYSHOP_DATE_SUBMIT","アイテム登録日付");
@@ -32,8 +32,8 @@ define("_MYSHOP_ONLINE","オンライン");
 define("_MYSHOP_OFFLINE","オフライン");
 
 define("_MYSHOP_CMD_DATE","ご注文日");
-define("_MYSHOP_FIRSTNAME","名");
-define("_MYSHOP_LASTNAME","姓");
+define("_MYSHOP_FIRSTNAME","担当者名（名）");
+define("_MYSHOP_LASTNAME","担当者名（氏）");
 define("_MYSHOP_EMAIL","Email");
 define("_MYSHOP_TYPE","タイプ");
 define("_MYSHOP_MANUFACTURER","出店者");
@@ -60,7 +60,7 @@ define("_MYSHOP_ATTACHED_FILE","添付ファイル");
 define("_MYSHOP_MANUFACTURERS","出品者");
 define("_MYSHOP_RELATED_PRODUCTS","関係する製品");
 
-define("_MYSHOP_GROUP","Xoops Group");
+define("_MYSHOP_GROUP","グループ");
 define("_MYSHOP_FORSALE","特売品");
 define("_MYSHOP_DISCOUNT1","Apply a discount of ");
 define("_MYSHOP_DISCOUNT2","percent");
@@ -207,7 +207,7 @@ define("_MYSHOP_DUPLICATE_PRODUCT","Duplicate product");
 define("_MYSHOP_DUPLICATE_DISCOUNT","Duplicate discount");
 define("_MYSHOP_HITS","Hits");
 define("_MYSHOP_PRODUCT_ID","Product's ID");
-define("_MYSHOP_COMM_NAME","取引名");
+define("_MYSHOP_COMM_NAME","出店名");
 define("_MYSHOP_YOU_CAN_DOWNLOAD","You can download your product(s) here :");
 
 define("_MYSHOP_IS_RECOMMENDED", "This product is recommended");
