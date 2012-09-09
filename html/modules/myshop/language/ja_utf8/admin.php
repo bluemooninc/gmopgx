@@ -30,8 +30,8 @@ define("_AM_MYSHOP_EDIT_STORE","Edit a store");
 define("_AM_MYSHOP_ADD_FILE","Add a file");
 define("_AM_MYSHOP_EDIT_FILE","Edit a file");
 
-define("_AM_MYSHOP_ADD_MANUFACTURER","製造者(メーカー)の追加");
-define("_AM_MYSHOP_EDIT_MANUFACTURER","製造者(メーカー)の編集");
+define("_AM_MYSHOP_ADD_MANUFACTURER","出品者の追加");
+define("_AM_MYSHOP_EDIT_MANUFACTURER","出品者の編集");
 
 define("_AM_MYSHOP_ADD_PRODUCT","Add a product");
 define("_AM_MYSHOP_EDIT_PRODUCT","Edit a product");
