@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-$comdir = XOOPS_ROOT_PATH . "/common/gpay_client/src/";
+$comdir = _MY_MODULE_PATH . "/vendor/gpay_client/src/";
 set_include_path($comdir);
 require_once('com/gmo_pg/client/input/SearchCardInput.php');
 require_once('com/gmo_pg/client/tran/SearchCard.php');

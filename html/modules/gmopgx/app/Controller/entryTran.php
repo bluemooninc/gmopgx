@@ -54,7 +54,7 @@ class Controller_EntryTran extends AbstractAction{
             $this->cardSeq = intval($_POST['CardSeq']);
             // 先にレコード保存してオーダーidを確定する事！ yoshis
 
-            $comdir = XOOPS_ROOT_PATH . "/common/gpay_client/src/";
+            $comdir = _MY_MODULE_PATH . "/vendor/gpay_client/src/";
 			set_include_path($comdir);			
 			require_once( 'com/gmo_pg/client/input/EntryTranInput.php');
 			require_once( 'com/gmo_pg/client/tran/EntryTran.php');

@@ -70,7 +70,7 @@ class Controller_ExecTran extends AbstractAction{
 	public function submit(){
 		global $xoopsModuleConfig,$xoopsUser;
 		if( $_POST['method'] == "submit" ){
-			$comdir = XOOPS_ROOT_PATH . "/common/gpay_client/src/";
+			$comdir = _MY_MODULE_PATH . "/vendor/gpay_client/src/";
 			set_include_path($comdir);			
 			require_once( 'com/gmo_pg/client/input/ExecTranInput.php');
 			require_once( 'com/gmo_pg/client/tran/ExecTran.php');
