@@ -70,12 +70,12 @@ class Controller_EntryTran extends AbstractAction{
 			//各種パラメータを設定しています。
 			//実際には、処理区分や利用金額、オーダーIDといったパラメータをカード所有者が直接入力することは無く、
 			//購買内容を元に加盟店様システムで生成した値が設定されるものと思います。
-			$input->setJobCd( $_POST['JobCd']);
-			$input->setOrderId( $_POST['OrderID'] );
+			$input->setJobCd('AUTH');        //$_POST['JobCd']
+			$input->setOrderId( intval($_POST['OrderID']) );
 			$input->setItemCode( NULL );	//	$_POST['ItemCode'] カード会社との間の契約にて使用する商品コードが決められた場合のみ入力
-			$input->setAmount( $_POST['Amount']);
-			$input->setTax( $_POST['Tax']);
-			$input->setTdFlag( $_POST['TdFlag']);
+			$input->setAmount( intval($_POST['Amount']) );
+			$input->setTax( intval($_POST['Tax']) );
+			$input->setTdFlag( intval($_POST['TdFlag']) );
 			$input->setTdTenantName( $_POST['TdTenantName']);
 	
 			//API通信クラスをインスタンス化します
