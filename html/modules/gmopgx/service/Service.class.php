@@ -169,20 +169,17 @@ class Gmopgx_Service extends XCube_Service
 
 			}
 			//例外発生せず、エラーの戻りもないので、正常とみなします。
-			model::setTable('payment');
-			$data = array(
-				'id'=>NULL,
-				'orderId'=> htmlspecialchars($orderId,ENT_QUOTES,_CHARSET),
-				'amount' => intval( $amount),
-				'tax'=> intval( $tax ),
-				'accessId' => $output->getAccessId(),
-				'accessPass' => $output->getAccessPass(),
-				'cardSeq'=> $cardSeq
-			);
-			model::forge($data);
-			model::save($memberId);
+			$myHandler = xoops_getmodulehandler('payment','gmopgx');
+			$object = $myHandler->create();
+			$object->set('orderId', htmlspecialchars($orderId,ENT_QUOTES,_CHARSET));
+			$object->set('amount', intval( $amount));
+			$object->set('tax', intval( $tax ));
+			$object->set('accessId', $output->getAccessId());
+			$object->set('accessPass', $output->getAccessPass());
+			$object->set('cardSeq', $cardSeq);
+			$myHandler->insert($object);
 			//このif文を抜けて、結果を表示します。
-			return model::id();
+			return true;
 		}		
 	}
 
