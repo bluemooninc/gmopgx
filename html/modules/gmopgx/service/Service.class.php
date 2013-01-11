@@ -13,6 +13,7 @@ class Gmopgx_Service extends XCube_Service
 	public function prepare()
 	{
 		$this->addFunction(S_PUBLIC_FUNC('int checkOrderStatus(int orderId)'));
+		$this->addFunction(S_PUBLIC_FUNC('int execTranByModule(int orderId,int uid)'));
 		$this->addFunction(S_PUBLIC_FUNC('array getRegisteredCardList()'));
 		$this->addFunction(S_PUBLIC_FUNC('int entryTransit(int order_id,int CardSeq,int amount, int tax'));
 	}
@@ -28,6 +29,36 @@ class Gmopgx_Service extends XCube_Service
 			$myrow = $modHand->getDataById($uid, $orderId);
 			if ($myrow) {
 				if ($myrow['status'] == 1) $ret = true;
+			}
+		}
+		return $ret;
+	}
+
+	/**
+	 * 決済実行API
+	 * 決済を実行し、成功すれば true を返す
+	 *
+	 * @return bool
+	 */
+	public function execTranByModule(){
+		$ret = false;
+		$root = XCube_Root::getSingleton();
+		$orderId = $root->mContext->mRequest->getRequest('orderId');
+		$uid = $root->mContext->mRequest->getRequest('uid');
+		if ($root->mContext->mUser->isInRole('Site.RegisteredUser')) {
+			$modHand = xoops_getmodulehandler('payment', 'gmopgx');
+			$objects = $modHand->getByOrderId($uid, $orderId, 0);
+			if (count($objects)>0) {
+				$object = $objects[0];
+				$cardSeq = $object->getVar('cardSeq');
+				$accessId = $object->getVar('accessId');
+				$accessPass = $object->getVar('accessPass');
+				$ret = $this->_execTransit($orderId,$uid,$cardSeq,$accessId,$accessPass);
+				if ($ret){
+					$object->set('utime',time());
+					$object->set('status',1);
+					$modHand->insert($object);
+				}
 			}
 		}
 		return $ret;
@@ -171,6 +202,7 @@ class Gmopgx_Service extends XCube_Service
 			//例外発生せず、エラーの戻りもないので、正常とみなします。
 			$myHandler = xoops_getmodulehandler('payment','gmopgx');
 			$object = $myHandler->create();
+			$object->set('uid', $memberId);
 			$object->set('orderId', htmlspecialchars($orderId,ENT_QUOTES,_CHARSET));
 			$object->set('amount', intval( $amount));
 			$object->set('tax', intval( $tax ));
@@ -183,29 +215,35 @@ class Gmopgx_Service extends XCube_Service
 		}		
 	}
 
-	public function execTransit()
+	/**
+	 * @param $orderId
+	 * @param $uid
+	 * @param $cardSeq
+	 * @param $accessId
+	 * @param $accessPass
+	 * @param string $paymentMethod
+	 * @return bool
+	 */
+	private function _execTransit($orderId,$uid,$cardSeq,$accessId,$accessPass,$paymentMethod = '1')
 	{
 		require_once('com/gmo_pg/client/input/ExecTranInput.php');
 		require_once('com/gmo_pg/client/tran/ExecTran.php');
 
 		$root = XCube_Root::getSingleton();
-		$memberId = $root->mContext->mXoopsUser->get('uid');
+		$memberId = $uid;
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
-
-		$orderId = $root->mContext->mRequest->getRequest('orderId');
-		$cardSeq = $root->mContext->mRequest->getRequest('cardSeq');
 
 		//入力パラメータクラスをインスタンス化します
 		$input = new ExecTranInput();
 
 		//カード番号入力型・会員ID決済型に共通する値です。
-		$input->setAccessId(model::get('accessId'));
-		$input->setAccessPass(model::get('accessPass'));
+		$input->setAccessId($accessId);
+		$input->setAccessPass($accessPass);
 		$input->setOrderId($orderId);
 
 		//支払方法に応じて、支払回数のセット要否が異なります。
-		$input->setMethod('1'); // ここでは、一括払い固定
+		$input->setMethod($paymentMethod); // デフォルトは一括払い
 
 		//このサンプルでは、加盟店自由項目１～３を全て利用していますが、これらの項目は任意項目です。
 		//利用しない場合、設定する必要はありません。

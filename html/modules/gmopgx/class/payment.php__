@@ -47,7 +47,13 @@ class gmopgx_paymentHandler extends XoopsObjectGenericHandler
         }
         return $ret;
     }
-
+    public function getByOrderId($uid, $orderId){
+	    $criteria = new CriteriaCompo();
+	    $criteria->add(new Criteria('uid', $uid));
+	    $criteria->add(new Criteria('orderId', $orderId));
+	    $this->myObjects = $this->myHandler->getObjects($criteria);
+	    return $this->myObjects;	    
+    }
     public function getDataById($uid = 0, $id = NULL)
     {
         $ret = array();
