@@ -63,14 +63,20 @@ class Gmopgx_Service extends XCube_Service
 		}
 		return $ret;
 	}
-
+	private function _getMemberId(&$root){
+		return $root->mContext->mXoopsUser->get('uid') . "-" . $root->mContext->mXoopsUser->get('uname');
+	}
+	private function _getMemberIdByUid($uid){
+		$user = new XoopsUser($uid);
+		return $uid . "-" . $user->getVar('uname');
+	}
 	public function &getRegisteredCardList()
 	{
 		require_once('com/gmo_pg/client/input/SearchCardInput.php');
 		require_once('com/gmo_pg/client/tran/SearchCard.php');
 
 		$root = XCube_Root::getSingleton();
-		$MemberId = $root->mContext->mXoopsUser->get('uid');
+		$memberId = $this->_getMemberId($root); 
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
 
@@ -82,7 +88,7 @@ class Gmopgx_Service extends XCube_Service
 		$input->setSitePass($myModuleConfig['PGCARD_SITE_PASS']);
 
 		//会員IDは必須です
-		$input->setMemberId($MemberId);
+		$input->setMemberId($memberId);
 
 		//カード登録連番が指定された場合、パラメータに設定します。
 		if (isset($_POST['CardSeq'])) {
@@ -133,7 +139,7 @@ class Gmopgx_Service extends XCube_Service
 		require_once( 'com/gmo_pg/client/tran/EntryTran.php');
 
 		$root = XCube_Root::getSingleton();
-		$memberId = $root->mContext->mXoopsUser->get('uid');
+		$memberId = $this->_getMemberId($root);
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
 
@@ -230,7 +236,7 @@ class Gmopgx_Service extends XCube_Service
 		require_once('com/gmo_pg/client/tran/ExecTran.php');
 
 		$root = XCube_Root::getSingleton();
-		$memberId = $uid;
+		$memberId = $this->_getMemberIdByUid($uid);
 		$root->mController->setupModuleContext('gmopgx');
 		$myModuleConfig = $root->mContext->mModuleConfig;
 
