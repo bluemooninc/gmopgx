@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/input/BaseInput.php');
+require_once (dirname(dirname(__FILE__)).'/input/BaseInput.php');
 
 /**
  * <b>Webmoney決済実行　入力パラメータクラス</b>
@@ -160,13 +160,17 @@ class ExecTranWebmoneyInput extends BaseInput {
 		$str .= '&';
 		$str .= 'CustomerName=' . $this->encodeStr($this->getCustomerName());
 		$str .= '&';
-		$str .= 'MailAddress=' . $this->encodeStr($this->getMailAddress());
+
+		$str .= 'MailAddress=' . $this->encodeStr($this->getMailAddress());
 		$str .= '&';
-		$str .= 'ShopMailAddress=' . $this->encodeStr($this->getShopMailAddress());
+
+		$str .= 'ShopMailAddress=' . $this->encodeStr($this->getShopMailAddress());
 		$str .= '&';
-		$str .= 'PaymentTermDay=' . $this->encodeStr($this->getPaymentTermDay());
+
+		$str .= 'PaymentTermDay=' . $this->encodeStr($this->getPaymentTermDay());
 		$str .= '&';
-		$str .= 'RedirectURL=' . $this->encodeStr($this->getRedirectURL());
+
+		$str .= 'RedirectURL=' . $this->encodeStr($this->getRedirectURL());
 		$str .= '&';
 		$str .= 'ClientField1=' . $this->encodeStr($this->getClientField1());
 		$str .= '&';

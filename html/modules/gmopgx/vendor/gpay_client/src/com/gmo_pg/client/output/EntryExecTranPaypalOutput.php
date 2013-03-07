@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranPaypalOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranPaypalOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranPaypalOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranPaypalOutput.php';
 
 /**
  * <b>Paypal取引登録・決済一括実行  出力パラメータクラス</b>

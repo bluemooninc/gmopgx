@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/DeleteMemberOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/DeleteMemberOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>会員削除　実行クラス</b>
  * 

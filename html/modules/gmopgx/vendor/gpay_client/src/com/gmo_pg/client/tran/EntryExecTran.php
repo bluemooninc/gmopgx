@@ -1,11 +1,11 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryExecTranOutput.php';
-require_once 'com/gmo_pg/client/input/TdVerifyInput.php';
-require_once 'com/gmo_pg/client/input/AcsParam.php';
-require_once 'com/gmo_pg/client/tran/EntryTran.php';
-require_once 'com/gmo_pg/client/tran/ExecTran.php';
-require_once 'com/gmo_pg/client/tran/TdVerify.php';
-require_once 'com/gmo_pg/client/common/RedirectUtil.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryExecTranOutput.php';
+require_once dirname(dirname(__FILE__)).'/input/TdVerifyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/AcsParam.php';
+require_once dirname(dirname(__FILE__)).'/tran/EntryTran.php';
+require_once dirname(dirname(__FILE__)).'/tran/ExecTran.php';
+require_once dirname(dirname(__FILE__)).'/tran/TdVerify.php';
+require_once dirname(dirname(__FILE__)).'/common/RedirectUtil.php';
 /**
  * <b>取引登録・決済一括実行　実行クラス</b>
  * 

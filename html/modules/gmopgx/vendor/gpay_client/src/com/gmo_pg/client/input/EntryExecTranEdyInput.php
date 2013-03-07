@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranEdyInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranEdyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranEdyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranEdyInput.php';
 /**
  * <b>モバイルEdy登録・決済一括実行　入力パラメータクラス</b>
  *

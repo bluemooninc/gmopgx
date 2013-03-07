@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/output/BaseOutput.php');
+require_once (dirname(dirname(__FILE__)).'/output/BaseOutput.php');
 /**
  * <b>コンビニ決済実行　出力パラメータクラス</b>
  * 

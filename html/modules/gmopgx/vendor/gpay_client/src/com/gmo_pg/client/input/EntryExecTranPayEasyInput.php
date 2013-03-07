@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranPayEasyInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranPayEasyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranPayEasyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranPayEasyInput.php';
 /**
  * <b>PayEasy登録・決済一括実行　入力パラメータクラス</b>
  *

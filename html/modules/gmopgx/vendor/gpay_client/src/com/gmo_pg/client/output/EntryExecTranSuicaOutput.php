@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranSuicaOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranSuicaOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranSuicaOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranSuicaOutput.php';
 /**
  * <b>モバイルSuica取引登録・決済一括実行  出力パラメータクラス</b>
  * 

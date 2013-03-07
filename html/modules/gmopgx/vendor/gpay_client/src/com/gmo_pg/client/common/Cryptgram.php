@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/common/Log.php';
-require_once 'com/gmo_pg/client/common/GPayException.php';
+require_once dirname(dirname(__FILE__)).'/common/Log.php';
+require_once dirname(dirname(__FILE__)).'/common/GPayException.php';
 
 /**
  * <b>暗号化プログラム</b>

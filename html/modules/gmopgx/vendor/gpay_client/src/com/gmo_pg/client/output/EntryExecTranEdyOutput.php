@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranEdyOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranEdyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranEdyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranEdyOutput.php';
 /**
  * <b>モバイルEdy取引登録・決済一括実行  出力パラメータクラス</b>
  * 

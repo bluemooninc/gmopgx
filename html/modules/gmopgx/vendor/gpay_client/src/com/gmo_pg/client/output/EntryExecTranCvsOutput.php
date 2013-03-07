@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranCvsOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranCvsOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranCvsOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranCvsOutput.php';
 /**
  * <b>コンビニ取引登録・決済一括実行  出力パラメータクラス</b>
  * 

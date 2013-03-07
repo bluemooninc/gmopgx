@@ -1,5 +1,5 @@
 <?php
-require_once 'com/gmo_pg/client/common/Log.php';
+require_once dirname(__FILE__).'/Log.php';
 
 /**
  * <b>連想配列(キーの大小文字無視)</b>

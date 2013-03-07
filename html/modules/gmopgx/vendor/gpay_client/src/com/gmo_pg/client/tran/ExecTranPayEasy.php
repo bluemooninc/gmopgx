@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/ExecTranPayEasyOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/ExecTranPayEasyOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>PayEasy決済実行　実行クラス</b>
  * 

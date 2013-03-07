@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/output/BaseOutput.php');
+require_once (dirname(dirname(__FILE__)).'/output/BaseOutput.php');
 /**
  * <b>3D認証後決済　出力パラメータクラス</b>
  * 

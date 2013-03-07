@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranWebmoneyOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranWebmoneyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranWebmoneyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranWebmoneyOutput.php';
 
 /**
  * <b>Webmoney取引登録・決済一括実行  出力パラメータクラス</b>
@@ -199,7 +199,8 @@ class EntryExecTranWebmoneyOutput {
 	function setCheckString( $checkString ) {
 		$this->execTranWebmoneyOutput->setCheckString($checkString);
 	}
-
+
+
 	/**
 	 * 加盟店自由項目1設定
 	 * @param $clientField1 加盟店自由項目1

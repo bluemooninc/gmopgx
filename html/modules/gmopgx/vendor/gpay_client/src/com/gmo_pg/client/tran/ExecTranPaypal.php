@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/ExecTranPaypalOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/ExecTranPaypalOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 
 /**
  * <b>Paypal決済実行　実行クラス</b>

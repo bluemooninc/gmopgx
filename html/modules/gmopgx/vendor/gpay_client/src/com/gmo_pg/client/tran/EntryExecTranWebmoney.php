@@ -1,7 +1,7 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryExecTranWebmoneyOutput.php';
-require_once 'com/gmo_pg/client/tran/EntryTranWebmoney.php';
-require_once 'com/gmo_pg/client/tran/ExecTranWebmoney.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryExecTranWebmoneyOutput.php';
+require_once dirname(dirname(__FILE__)).'/tran/EntryTranWebmoney.php';
+require_once dirname(dirname(__FILE__)).'/tran/ExecTranWebmoney.php';
 
 
 /**

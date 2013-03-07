@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/input/BaseInput.php');
+require_once (dirname(dirname(__FILE__)).'/input/BaseInput.php');
 /**
  * <b>auかんたん決済オーソリ認証結果取得　入力パラメータクラス</b>
  * 

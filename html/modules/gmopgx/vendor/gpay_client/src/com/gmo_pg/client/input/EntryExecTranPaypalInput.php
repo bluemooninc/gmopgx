@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranPaypalInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranPaypalInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranPaypalInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranPaypalInput.php';
 
 /**
  * <b>Paypal登録・決済一括実行　入力パラメータクラス</b>

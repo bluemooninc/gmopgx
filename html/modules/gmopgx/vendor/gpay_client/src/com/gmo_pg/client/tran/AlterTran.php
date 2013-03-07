@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/AlterTranOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/AlterTranOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>取引変更 実行クラス</b>
  * 

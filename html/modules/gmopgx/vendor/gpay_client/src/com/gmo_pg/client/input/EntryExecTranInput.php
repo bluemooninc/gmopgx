@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranInput.php';
 /**
  * <b>登録・決済一括実行　入力パラメータクラス</b>
  * 

@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/common/IgnoreCaseMap.php';
-require_once 'com/gmo_pg/client/common/Log.php';
+require_once dirname(dirname(__FILE__)).'/common/IgnoreCaseMap.php';
+require_once dirname(dirname(__FILE__)).'/common/Log.php';
 
 /**
  * <b>接続先URLマップ</b>

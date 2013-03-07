@@ -1,7 +1,7 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryExecTranPaypalOutput.php';
-require_once 'com/gmo_pg/client/tran/EntryTranPaypal.php';
-require_once 'com/gmo_pg/client/tran/ExecTranPaypal.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryExecTranPaypalOutput.php';
+require_once dirname(dirname(__FILE__)).'/tran/EntryTranPaypal.php';
+require_once dirname(dirname(__FILE__)).'/tran/ExecTranPaypal.php';
 
 
 /**

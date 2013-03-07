@@ -1,5 +1,5 @@
 <?php
-require_once 'com/gmo_pg/client/common/ParamParser.php';
+require_once dirname(dirname(__FILE__)).'/common/ParamParser.php';
 /**
  * @abstract 
  * <b>出力パラメータ 基底クラス</b>

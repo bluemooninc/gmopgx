@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/common/LogFormatter.php');
+require_once ( dirname(__FILE__).'/LogFormatter.php' );
 
 /**
  * <b>独自ログクラス</b>

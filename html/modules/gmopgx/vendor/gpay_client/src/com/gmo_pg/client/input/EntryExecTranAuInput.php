@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranAuInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranAuInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranAuInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranAuInput.php';
 /**
  * <b>auかんたん決済登録・決済一括実行　入力パラメータクラス</b>
  *

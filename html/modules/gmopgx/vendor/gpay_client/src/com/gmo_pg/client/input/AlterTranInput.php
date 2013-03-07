@@ -1,5 +1,5 @@
 <?php
-require_once 'com/gmo_pg/client/input/BaseInput.php';
+require_once dirname(dirname(__FILE__)).'/input/BaseInput.php';
 /**
  * <b>取引変更入力パラメータクラス</b>
  * 

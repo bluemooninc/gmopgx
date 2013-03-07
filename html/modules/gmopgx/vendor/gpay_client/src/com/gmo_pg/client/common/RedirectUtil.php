@@ -1,7 +1,7 @@
 <?php
 
-require_once 'com/gmo_pg/client/common/GPayException.php';
-require_once 'com/gmo_pg/client/common/ConnectUrlMap.php';
+require_once dirname(dirname(__FILE__)).'/common/GPayException.php';
+require_once dirname(dirname(__FILE__)).'/common/ConnectUrlMap.php';
 
 /**
  * <b>リダイレクトページ生成</b>

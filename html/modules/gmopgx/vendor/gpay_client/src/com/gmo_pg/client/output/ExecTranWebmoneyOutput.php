@@ -1,5 +1,5 @@
 <?php
-require_once ('com/gmo_pg/client/output/BaseOutput.php');
+require_once (dirname(dirname(__FILE__)).'/output/BaseOutput.php');
 
 /**
  * <b>Webmoney決済実行　出力パラメータクラス</b>
@@ -172,7 +172,8 @@ class ExecTranWebmoneyOutput extends BaseOutput {
 	function setCheckString($checkString) {
 		$this->checkString = $checkString;
 	}
-
+
+
 	/**
 	 * 加盟店自由項目1設定
 	 *

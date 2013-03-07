@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/UpdateMemberOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/UpdateMemberOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>会員更新　実行クラス</b>
  * 

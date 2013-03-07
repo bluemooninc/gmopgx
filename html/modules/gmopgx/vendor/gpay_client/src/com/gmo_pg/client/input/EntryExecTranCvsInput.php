@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranCvsInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranCvsInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranCvsInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranCvsInput.php';
 /**
  * <b>コンビニ登録・決済一括実行　入力パラメータクラス</b>
  *

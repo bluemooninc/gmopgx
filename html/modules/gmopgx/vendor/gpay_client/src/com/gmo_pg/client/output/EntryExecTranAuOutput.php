@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranAuOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranAuOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranAuOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranAuOutput.php';
 /**
  * <b>auかんたん決済登録・決済一括実行  出力パラメータクラス</b>
  * 

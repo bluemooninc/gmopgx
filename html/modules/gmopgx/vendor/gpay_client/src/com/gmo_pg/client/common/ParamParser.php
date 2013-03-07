@@ -1,5 +1,5 @@
 <?php
-require_once 'com/gmo_pg/client/output/ErrHolder.php';
+require_once dirname(dirname(__FILE__)).'/output/ErrHolder.php';
 
 /**
  * <b>API返却パラメータ文字列パーサ</b>

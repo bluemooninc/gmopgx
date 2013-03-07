@@ -1,5 +1,5 @@
 <?php
-require_once 'com/gmo_pg/client/input/BaseInput.php';
+require_once dirname(dirname(__FILE__)).'/input/BaseInput.php';
 /**
  * <b>3D認証後取引実行　入力パラメータクラス</b>
  * 

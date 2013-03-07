@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryTranPayEasyOutput.php';
-require_once 'com/gmo_pg/client/output/ExecTranPayEasyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryTranPayEasyOutput.php';
+require_once dirname(dirname(__FILE__)).'/output/ExecTranPayEasyOutput.php';
 /**
  * <b>PayEasy取引登録・決済一括実行  出力パラメータクラス</b>
  * 

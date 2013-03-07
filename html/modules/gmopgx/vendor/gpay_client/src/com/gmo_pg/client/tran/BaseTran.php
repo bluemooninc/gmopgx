@@ -1,9 +1,9 @@
 <?php
-require_once 'com/gmo_pg/client/common/Log.php';
-require_once 'com/gmo_pg/client/common/ParamParser.php';
-require_once 'com/gmo_pg/client/common/IgnoreCaseMap.php';
-require_once 'com/gmo_pg/client/common/GPayException.php';
-require_once 'com/gmo_pg/client/common/ConnectUrlMap.php';
+require_once dirname(dirname(__FILE__)).'/common/Log.php';
+require_once dirname(dirname(__FILE__)).'/common/ParamParser.php';
+require_once dirname(dirname(__FILE__)).'/common/IgnoreCaseMap.php';
+require_once dirname(dirname(__FILE__)).'/common/GPayException.php';
+require_once dirname(dirname(__FILE__)).'/common/ConnectUrlMap.php';
 /**
  * @abstract 
  * <b>API 基底クラス</b>

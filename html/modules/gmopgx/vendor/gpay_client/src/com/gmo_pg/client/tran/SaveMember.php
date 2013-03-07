@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/SaveMemberOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/SaveMemberOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>会員登録　実行クラス</b>
  * 

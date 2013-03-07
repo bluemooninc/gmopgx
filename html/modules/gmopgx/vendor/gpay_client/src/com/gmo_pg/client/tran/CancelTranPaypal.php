@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/CancelTranPaypalOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/CancelTranPaypalOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 
 /**
  * <b>Paypal払い戻し　実行クラス</b>

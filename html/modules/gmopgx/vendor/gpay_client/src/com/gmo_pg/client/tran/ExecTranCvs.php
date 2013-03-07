@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/ExecTranCvsOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/ExecTranCvsOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>コンビニ決済実行　実行クラス</b>
  * 

@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/SearchCardOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/SearchCardOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>カード照会　実行クラス</b>
  * 

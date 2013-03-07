@@ -1,7 +1,7 @@
 <?php
-require_once 'com/gmo_pg/client/output/EntryExecTranAuOutput.php';
-require_once 'com/gmo_pg/client/tran/EntryTranAu.php';
-require_once 'com/gmo_pg/client/tran/ExecTranAu.php';
+require_once dirname(dirname(__FILE__)).'/output/EntryExecTranAuOutput.php';
+require_once dirname(dirname(__FILE__)).'/tran/EntryTranAu.php';
+require_once dirname(dirname(__FILE__)).'/tran/ExecTranAu.php';
 /**
  * <b>auかんたん決済登録・決済一括実行　実行クラス</b>
  * 

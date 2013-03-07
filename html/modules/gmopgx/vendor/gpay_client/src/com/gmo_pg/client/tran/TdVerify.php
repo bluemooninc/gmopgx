@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/TdVerifyOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/TdVerifyOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>3D認証後決済　実行クラス</b>
  * 

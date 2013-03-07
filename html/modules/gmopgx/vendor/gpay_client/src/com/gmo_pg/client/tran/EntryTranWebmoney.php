@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/EntryTranWebmoneyOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/EntryTranWebmoneyOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 
 /**
  * <b>Webmoney取引登録　実行クラス</b>

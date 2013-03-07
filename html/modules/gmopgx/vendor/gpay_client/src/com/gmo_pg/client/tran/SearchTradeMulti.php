@@ -1,6 +1,6 @@
 <?php
-require_once ('com/gmo_pg/client/output/SearchTradeMultiOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/output/SearchTradeMultiOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>取引照会MULTI　実行クラス</b>
  * 

@@ -1,8 +1,8 @@
 <?php
-require_once ('com/gmo_pg/client/common/Cryptgram.php');
-require_once ('com/gmo_pg/client/common/GPayException.php');
-require_once ('com/gmo_pg/client/output/DeleteAuOpenIDOutput.php');
-require_once ('com/gmo_pg/client/tran/BaseTran.php');
+require_once (dirname(dirname(__FILE__)).'/common/Cryptgram.php');
+require_once (dirname(dirname(__FILE__)).'/common/GPayException.php');
+require_once (dirname(dirname(__FILE__)).'/output/DeleteAuOpenIDOutput.php');
+require_once (dirname(dirname(__FILE__)).'/tran/BaseTran.php');
 /**
  * <b>auかんたん決済OpenID解除　実行クラス</b>
  * 

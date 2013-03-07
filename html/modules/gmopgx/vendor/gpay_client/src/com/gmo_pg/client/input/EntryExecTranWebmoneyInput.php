@@ -1,6 +1,6 @@
 <?php
-require_once 'com/gmo_pg/client/input/EntryTranWebmoneyInput.php';
-require_once 'com/gmo_pg/client/input/ExecTranWebmoneyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/EntryTranWebmoneyInput.php';
+require_once dirname(dirname(__FILE__)).'/input/ExecTranWebmoneyInput.php';
 
 /**
  * <b>Webmoney登録・決済一括実行　入力パラメータクラス</b>
